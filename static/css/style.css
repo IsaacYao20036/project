@@ -1,0 +1,8 @@
+header h1{
+    display:inline;
+    padding-right: 100px;
+}
+nav {
+    float: inline-start;
+    display:inline;
+}
