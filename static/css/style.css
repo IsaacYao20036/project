@@ -1,8 +1,8 @@
 header h1{
-    display:inline;
+    display: inline;
     padding-right: 100px;
 }
 nav {
     float: inline-start;
-    display:inline;
+    display: inline;
 }
