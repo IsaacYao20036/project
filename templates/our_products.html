@@ -1,8 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>Our Products</h2>
+<h2>Flavours</h2>
 {% for item in flavours %}
-    <h3>{{ item[1] }} &nbsp; ${{ item[2] }}.00</h3>
+    <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
+    <p>{{ item[3] }}</p>
+{% endfor %}
+<h2>Toppings</h2>
+{% for item in toppings %}
+    <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
     <p>{{ item[3] }}</p>
 {% endfor %}
 {% endblock %}
