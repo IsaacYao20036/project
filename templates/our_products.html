@@ -10,4 +10,9 @@
     <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
     <p>{{ item[3] }}</p>
 {% endfor %}
+<h2>Cones, Cups & Containers</h2>
+{% for item in containers %}
+    <h3>{{ item[1] }}</h3>
+    <p>{{ item[2] }}</p>
+{% endfor %}
 {% endblock %}

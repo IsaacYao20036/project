@@ -23,7 +23,9 @@ def our_products():
     flavours = cur.fetchall()
     cur.execute("SELECT * FROM Topping")
     toppings = cur.fetchall()
-    return render_template("our_products.html", flavours = flavours, toppings = toppings)
+    cur.execute("SELECT * FROM Container")
+    containers = cur.fetchall()
+    return render_template("our_products.html", flavours = flavours, toppings = toppings, containers = containers)
 
 
 @app.route("/order_&_delivery")
