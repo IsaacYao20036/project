@@ -22,17 +22,15 @@ footer {
 }
 
 .flavours {
-    display: flex;
+    display: static;
 }
 
 .flavours-content {
     display: none;
-    position: relative;
-    clear: left;
+    position: block;
 }
 
- /*
-.flavours:active .flavours-content {
-    display: block;
+.flavours:focus-within .flavours-content {
+    display: flex;
+    flex-direction: column;
   }
-*/
