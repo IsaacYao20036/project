@@ -10,18 +10,25 @@
         {% endfor %}
     </div>
 </details>
-    
-</div>
 
-<h2>Toppings</h2>
-{% for item in toppings %}
-    <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
-    <p>{{ item[3] }}</p>
-{% endfor %}
+<details>
+    <summary><h2>Toppings</h2></summary>
+    <div class="content">
+        {% for item in toppings %}
+        <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
+        <p>{{ item[3] }}</p>
+        {% endfor %}
+    </div>
+</details>
 
-<h2>Cones, Cups & Containers</h2>
-{% for item in containers %}
-    <h3>{{ item[1] }}</h3>
-    <p>{{ item[2] }}</p>
-{% endfor %}
+<details>
+    <summary><h2>Cones, Cups & Containers</h2></summary>
+    <div class="content">
+        {% for item in containers %}
+        <h3>{{ item[1] }}</h3>
+        <p>{{ item[2] }}</p>
+        {% endfor %}
+    </div>
+</details>
+
 {% endblock %}
