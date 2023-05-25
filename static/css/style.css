@@ -32,16 +32,3 @@ details summary > * {
 .content {
     display: block;
 }
-
-.dropdown {
-    display: inline;
-}
-
-.option {
-    display: none;
-    position: absolute;
-}
-
-.dropdown:hover .options {
-    display: block;
-}

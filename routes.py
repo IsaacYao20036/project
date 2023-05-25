@@ -30,7 +30,11 @@ def our_products():
 
 @app.route("/order_&_delivery")
 def order_and_delivery():
-    return render_template("order_&_delivery.html")
+    conn = sqlite3.connect("project.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM Flavour")
+    flavours = cur.fetchall()
+    return render_template("order_&_delivery.html", flavours = flavours)
 
 if __name__ == "__main__":
     app.run(debug=True)

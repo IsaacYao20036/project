@@ -2,11 +2,15 @@
 {% block content %}
 <h2>Order & Delivery</h2>
 
-<div class="dropdown">
-    <p>Choose Flavour</p>
-    <div class="options">
-        <p>Option</p>
-    </div>
-</div>
+    <form>
+        <label for="flavour">Choose a flavour:</label>
+        <select name="flavour" id="flavours">
+            {% for item in flavours %}
+                <option value="{{ item[0] }}">{{ item[1] }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+<button class="addbtn" onclick="">+</button>
 
 {% endblock %}
