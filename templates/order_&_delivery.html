@@ -1,16 +1,20 @@
+<script src="{{url_for('static', filename='script.js')}}"></script>
+
 {% extends "layout.html" %}
 {% block content %}
 <h2>Order & Delivery</h2>
 
     <form>
         <label for="flavour">Choose a flavour:</label>
-        <select name="flavour" id="flavours">
-            {% for item in flavours %}
-                <option value="{{ item[0] }}">{{ item[1] }}</option>
-            {% endfor %}
-        </select>
+        <div id="container">
+            <select name="flavours" id="flavours">
+                {% for item in flavours %}
+                    <option value="{{ item[0] }}">{{ item[1] }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </form>
 
-<button class="addbtn" onclick="">+</button>
+        <button onclick="cloneSelect()">Add another Select</button>
 
 {% endblock %}
