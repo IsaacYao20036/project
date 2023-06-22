@@ -34,7 +34,9 @@ def order_and_delivery():
     cur = conn.cursor()
     cur.execute("SELECT * FROM Flavour")
     flavours = cur.fetchall()
-    return render_template("order_&_delivery.html", flavours = flavours)
+    cur.execute("SELECT * FROM Container")
+    containers = cur.fetchall()
+    return render_template("order_&_delivery.html", flavours = flavours, containers = containers)
 
 if __name__ == "__main__":
     app.run(debug=True)

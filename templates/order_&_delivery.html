@@ -4,17 +4,28 @@
 {% block content %}
 <h2>Order & Delivery</h2>
 
-    <form>
-        <label for="flavour">Choose a flavour:</label>
-        <div id="container">
-            <select name="flavours" id="flavours">
-                {% for item in flavours %}
-                    <option value="{{ item[0] }}">{{ item[1] }}</option>
-                {% endfor %}
-            </select>
-        </div>
-    </form>
+<form>
+        
+    <div id="divContainer">
 
-        <button onclick="cloneSelect()">Add another Select</button>
+        <label for="flavours">Choose a flavour:</label>
+        <select name="flavours" id="flavours">
+            {% for item in flavours %}
+                <option value="{{ item[0] }}">{{ item[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="containers">Choose a container:</label>
+        <select name="containers" id="containers">
+            {% for item in containers %}
+                <option value="{{ item[0] }}">{{ item[1] }}</option>
+            {% endfor %}
+        </select>
+
+    </div>
+
+</form>
+
+<button onclick="cloneSelect()">Add row</button>
 
 {% endblock %}
