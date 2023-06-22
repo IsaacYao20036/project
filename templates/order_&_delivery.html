@@ -10,6 +10,7 @@
 
         <label for="flavours">Choose a flavour:</label>
         <select name="flavours" id="flavours">
+            <option value="" selected>-- Select flavour --</option>
             {% for item in flavours %}
                 <option value="{{ item[0] }}">{{ item[1] }}</option>
             {% endfor %}
@@ -17,6 +18,7 @@
 
         <label for="containers">Choose a container:</label>
         <select name="containers" id="containers">
+            <option value="" selected>-- Select container --</option>
             {% for item in containers %}
                 <option value="{{ item[0] }}">{{ item[1] }}</option>
             {% endfor %}

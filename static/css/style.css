@@ -1,3 +1,7 @@
+/***********
+*  GLOBAL  *
+***********/
+
 * {
     position: relative;
 }
@@ -25,10 +29,24 @@ details summary {
     cursor: pointer;
 }
 
+
+/**********************
+*  OUR PRODUCTS PAGE  *
+**********************/
+
 details summary > * {
     display: inline;
 }
 
 .content {
     display: block;
+}
+
+
+/**************************
+*  ORDER & DELIVERY PAGE  *
+**************************/
+
+select:invalid, select option[value=""] {
+  color: darkgray;
 }
