@@ -8,7 +8,9 @@
         
     <div id="divContainer">
 
-        <label for="flavours">Choose a flavour:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <span> x&nbsp;</span>
+
         <select name="flavours" id="flavours">
             <option value="" selected>-- Select flavour --</option>
             {% for item in flavours %}
@@ -16,7 +18,8 @@
             {% endfor %}
         </select>
 
-        <label for="containers">Choose a container:</label>
+        <span>&nbsp;in&nbsp;</span>
+
         <select name="containers" id="containers">
             <option value="" selected>-- Select container --</option>
             {% for item in containers %}
@@ -28,6 +31,6 @@
 
 </form>
 
-<button onclick="cloneSelect()">Add row</button>
+<button onclick="cloneFunction()">Add row</button>
 
 {% endblock %}
