@@ -39,4 +39,14 @@ function cloneFunction() {
  
 }
 
-/* A majority of this code is from https://stackoverflow.com/questions/34471016/adding-new-select-tag-by-clicking-on-the-button */
+/* A majority of the code above is from https://stackoverflow.com/questions/34471016/adding-new-select-tag-by-clicking-on-the-button */
+
+
+function openDialog() {
+
+  var dialog = document.getElementById("order_dlg");    
+    document.getElementById("order_btn").onclick = function() {    
+        dialog.show();
+    };
+
+}
