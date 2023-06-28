@@ -1,4 +1,4 @@
-<script src="{{url_for('static', filename='script.js')}}"></script>
+
 
 {% extends "layout.html" %}
 {% block content %}
@@ -40,5 +40,8 @@
         <button onclick="location.reload()">OK</button>
     </form>
 </dialog>
+
+<script src="{{url_for('static', filename='disablebutton.js')}}"></script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
 
 {% endblock %}

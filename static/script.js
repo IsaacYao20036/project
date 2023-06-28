@@ -39,7 +39,8 @@ function cloneFunction() {
  
 }
 
-/* A majority of the code above is from https://stackoverflow.com/questions/34471016/adding-new-select-tag-by-clicking-on-the-button */
+/* A majority of the code above is from https://stackoverflow.com/questions/34471016/adding-new-select-tag-by-clicking-on-the-button
+answered by CoderPi Dec 26, 2015 at 12:01, edited Dec 26, 2015 at 14:00 */
 
 
 function openDialog() {
@@ -49,4 +50,25 @@ function openDialog() {
         dialog.show();
     };
 
+}
+
+
+/* The code below is edited version of the one from https://flexiple.com/javascript/disable-button-javascript/
+written by Flexiple Inc*/
+
+let flavoursSelect = document.getElementById("flavours");
+let containersSelect = document.getElementById("containers");
+let order = document.getElementById("order_btn");
+
+order.disabled = true;
+
+flavoursSelect.addEventListener("change", stateHandle);
+flavoursSelect.addEventListener("change", stateHandle);
+
+function stateHandle() {
+    if (document.getElementById("flavours").value === "", document.getElementById("containers").value === "") {
+        order.disabled = true;
+    } else {
+    order.disabled = false;
+    }
 }
