@@ -8,7 +8,7 @@
         
     <div id="divContainer">
 
-        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <input type="number" id="quantity" name="quantity" value="" min="1" max="5">
         <span> x&nbsp;</span>
 
         <select name="flavours" id="flavours">
@@ -41,7 +41,6 @@
     </form>
 </dialog>
 
-<script src="{{url_for('static', filename='disablebutton.js')}}"></script>
 <script src="{{url_for('static', filename='script.js')}}"></script>
 
 {% endblock %}

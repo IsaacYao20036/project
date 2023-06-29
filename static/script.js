@@ -56,19 +56,25 @@ function openDialog() {
 /* The code below is edited version of the one from https://flexiple.com/javascript/disable-button-javascript/
 written by Flexiple Inc*/
 
+let quantityField = document.getElementById("quantity")
 let flavoursSelect = document.getElementById("flavours");
 let containersSelect = document.getElementById("containers");
 let order = document.getElementById("order_btn");
 
 order.disabled = true;
 
-flavoursSelect.addEventListener("change", stateHandle);
-flavoursSelect.addEventListener("change", stateHandle);
+flavoursSelect.addEventListener("click", stateHandle);
+containersSelect.addEventListener("click", stateHandle);
+quantityField = addEventListener("click", stateHandle);
 
 function stateHandle() {
-    if (document.getElementById("flavours").value === "", document.getElementById("containers").value === "") {
-        order.disabled = true;
+    if (document.getElementById("quantity").value === "") {
+      order.disabled = true;
+    } else if (document.getElementById("flavours").value === "") {
+      order.disabled = true;
+    } else if (document.getElementById("containers").value === ""){
+      order.disabled = true;
     } else {
-    order.disabled = false;
+      order.disabled = false;
     }
 }
