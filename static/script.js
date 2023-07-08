@@ -68,7 +68,13 @@ containersSelect.addEventListener("click", stateHandle);
 quantityField = addEventListener("click", stateHandle);
 
 function stateHandle() {
-    if (document.getElementById("quantity").value === "") {
+    if (Number(document.getElementById("quantity").value) > 5) {
+      order.disabled = true;
+    } else if (Number(document.getElementById("quantity").value) < 1) {
+      order.disabled = true;
+    } else if (Number.isInteger(Number(document.getElementById("quantity").value)) == false) {
+      order.disabled = true;
+    } else if (document.getElementById("quantity").value === "") {
       order.disabled = true;
     } else if (document.getElementById("flavours").value === "") {
       order.disabled = true;
