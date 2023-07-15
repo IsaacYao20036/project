@@ -13,8 +13,8 @@
 
         <select name="flavours" id="flavours">
             <option value="" selected>-- Select flavour --</option>
-            {% for item in flavours %}
-                <option value="{{ item[0] }}">{{ item[1] }}</option>
+            {% for f_name in flavours %}
+                <option value="{{ f_name[0] }}">{{ f_name[0] }}</option>
             {% endfor %}
         </select>
 
@@ -22,8 +22,8 @@
 
         <select name="containers" id="containers">
             <option value="" selected>-- Select container --</option>
-            {% for item in containers %}
-                <option value="{{ item[0] }}">{{ item[1] }}</option>
+            {% for c_name in containers %}
+                <option value="{{ c_name[0] }}">{{ c_name[0] }}</option>
             {% endfor %}
         </select>
 

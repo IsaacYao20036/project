@@ -32,9 +32,9 @@ def our_products():
 def order_and_delivery():
     conn = sqlite3.connect("project.db")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM Flavour")
+    cur.execute("SELECT name FROM Flavour")
     flavours = cur.fetchall()
-    cur.execute("SELECT * FROM Container")
+    cur.execute("SELECT name FROM Container")
     containers = cur.fetchall()
     return render_template("order_&_delivery.html", flavours = flavours, containers = containers)
 
