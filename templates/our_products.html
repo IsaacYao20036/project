@@ -4,15 +4,19 @@
 <details>
     <summary><h2>Flavours</h2></summary>
     <div class="content">
+
         {% for item in flavours %}
             <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
             <p>{{ item[3] }}</p>
+
+            <p>Incompatible Toppings:</p>
             {% for topping in incompatible_toppings %}
-                {% set flavour_id = topping[0]%}
+                {% set flavour_id = topping[0] %}
                 {% if item[0] == flavour_id %}
-                    <p>{{ topping[1] }}: {{ topping[2] }}</p>
+                    <ul><li>{{ topping[1] }} - {{ topping[2] }}</li></ul>
                 {% endif %}
             {% endfor %}
+
         {% endfor %}
     </div>
 </details>
@@ -20,9 +24,19 @@
 <details>
     <summary><h2>Toppings</h2></summary>
     <div class="content">
+
         {% for item in toppings %}
             <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
             <p>{{ item[3] }}</p>
+
+            <p>Incompatible Flavours:</p>
+            {% for flavour in incompatible_flavours %}
+                {% set topping_id = flavour[0] %}
+                {% if item[0] == topping_id %}
+                    <ul><li>{{ flavour[1] }} - {{ flavour[2] }}</li></ul>
+                {% endif %}
+            {% endfor %}
+
         {% endfor %}
     </div>
 </details>

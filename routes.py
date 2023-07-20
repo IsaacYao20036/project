@@ -27,7 +27,9 @@ def our_products():
     containers = cur.fetchall()
     cur.execute("SELECT Incompatible.fid, Topping.name, Incompatible.warning FROM Incompatible INNER JOIN Topping ON Incompatible.tid=Topping.id")
     incompatible_toppings = cur.fetchall()
-    return render_template("our_products.html", flavours=flavours, toppings=toppings, containers=containers, incompatible_toppings=incompatible_toppings)
+    cur.execute("SELECT Incompatible.tid, Flavour.name, Incompatible.warning FROM Incompatible INNER JOIN Flavour ON Incompatible.fid=Flavour.id")
+    incompatible_flavours  = cur.fetchall()
+    return render_template("our_products.html", flavours=flavours, toppings=toppings, containers=containers, incompatible_toppings=incompatible_toppings, incompatible_flavours=incompatible_flavours)
 
 
 @app.route("/order_&_delivery")
@@ -36,7 +38,7 @@ def order_and_delivery():
     cur = conn.cursor()
     cur.execute("SELECT name FROM Flavour")
     flavours = cur.fetchall()
-    cur.execute("SELECT name FROM Container")
+    cur.execute("SELECT id, name FROM Container")
     containers = cur.fetchall()
     return render_template("order_&_delivery.html", flavours=flavours, containers=containers)
 
