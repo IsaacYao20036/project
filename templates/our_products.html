@@ -8,6 +8,7 @@
         {% for item in flavours %}
             <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
             <p>{{ item[3] }}</p>
+            <img src="/static/images/{{ item[4] }}" alt="Photo of '{{ item[1] }}' Flavour">
 
             <p>Incompatible Toppings:</p>
             {% for topping in incompatible_toppings %}
