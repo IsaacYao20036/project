@@ -6,14 +6,46 @@
     position: relative;
 }
 
+img {
+    width: 250px;
+}
+
+
+/***********
+*  HEADER  *
+***********/
+
+header {
+    background-color: #543FFF;
+}
+
 header h1{
     display: inline;
     padding-right: 100px;
 }
+
+
+/********
+*  NAV  *
+********/
+
 nav {
     float: inline-start;
     display: inline;
 }
+
+a {
+    color: black;
+}
+
+a:active {
+    font-weight: bold;
+}
+
+
+/*********
+*  BODY  *
+*********/
 
 body {
     min-height: 100vh;
@@ -21,16 +53,13 @@ body {
     flex-direction: column;
 }
 
+
+/***********
+*  FOOTER  *
+***********/
+
 footer {
     margin-top: auto;
-}
-
-details summary {
-    cursor: pointer;
-}
-
-img {
-    width: 250px;
 }
 
 
@@ -38,12 +67,16 @@ img {
 *  OUR PRODUCTS PAGE  *
 **********************/
 
-details summary > * {
-    display: inline;
+details summary {
+    cursor: pointer;
 }
 
 .content {
     display: block;
+}
+
+details summary > * {
+    display: inline;
 }
 
 
