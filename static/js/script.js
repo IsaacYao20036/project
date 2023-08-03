@@ -84,3 +84,8 @@ function stateHandle() {
       order.disabled = false;
     }
 }
+
+function navlinkBold() {
+  let path = location.pathname;
+  document.getElementById("demo").innerHTML = path;
+};
