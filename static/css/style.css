@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 /***********
 *  GLOBAL  *
 ***********/
@@ -16,13 +18,15 @@ img {
 ***********/
 
 header {
-    background-color: #543FFF;
+    background-color: #543fff;
 }
 
 header h1{
     display: inline;
     padding-right: 100px;
     font-family: "Dancing Script", "Brush Script MT", cursive;
+    font-weight: bold;
+    color:gold;
 }
 
 
