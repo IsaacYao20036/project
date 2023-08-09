@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 /***********
 *  GLOBAL  *
@@ -54,6 +55,14 @@ body {
     flex-direction: column;
 }
 
+h2 {
+    font-family:"Bagel Fat One", fantasy;
+    color: #311847;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /***********
 *  FOOTER  *
