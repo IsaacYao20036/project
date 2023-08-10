@@ -15,4 +15,4 @@ if (path == "/") {
 }
 
 /* Changes nav link to bold with same id in linkID */
-document.getElementById(linkID).style.fontWeight = "bold";
+document.getElementById(linkID).style.fontFamily = "Bagel Fat One", fantasy ;

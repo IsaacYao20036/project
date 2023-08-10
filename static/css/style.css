@@ -13,6 +13,9 @@ img {
     width: 250px;
 }
 
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 /***********
 *  HEADER  *
@@ -41,7 +44,9 @@ nav {
 }
 
 a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
+    text-decoration: none;
 }
 
 
@@ -56,7 +61,7 @@ body {
 }
 
 h2 {
-    font-family:"Bagel Fat One", fantasy;
+    font-family: "Bagel Fat One", fantasy;
     color: #311847;
 }
 
@@ -81,14 +86,17 @@ details summary {
     cursor: pointer;
 }
 
+details summary > h2 {
+    display: inline;
+}
+
 .content {
     display: block;
 }
 
-details summary > * {
-    display: inline;
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 /**************************
 *  ORDER & DELIVERY PAGE  *
