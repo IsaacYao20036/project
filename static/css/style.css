@@ -35,8 +35,7 @@ header {
 
 /* Logo image left of header h1 */
 #logo {
-    width: 48px;
-    border-radius: 50%;
+    width: 56px;
     top: 5px;
 }
 
@@ -44,7 +43,7 @@ header h1{
     display: inline;
     padding-left: 20px;
     padding-right: 200px;
-    bottom: 5px;
+    bottom: 10px;
     font-size: 40px;
     font-family: "Dancing Script", "Brush Script MT", cursive;
     font-weight: bold;
@@ -62,7 +61,7 @@ nav {
 }
 
 a {
-    bottom: 5px;
+    bottom: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: black;
