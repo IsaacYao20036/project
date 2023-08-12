@@ -23,10 +23,17 @@ li {
 ***********/
 
 header {
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px 0px 20px 20px;
     padding-left: 20px;
     background-color: #543fff;
 }
 
+/* Logo image left of header h1 */
 #logo {
     width: 48px;
     border-radius: 50%;
@@ -68,9 +75,10 @@ a {
 *********/
 
 body {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
+    padding-top: 64px;
 }
 
 h2 {
@@ -104,7 +112,8 @@ details summary > h2 {
     display: inline;
 }
 
-.content {
+/* All divs under details */
+details .content {
     display: block;
 }
 
