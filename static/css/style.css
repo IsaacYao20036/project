@@ -15,7 +15,7 @@
 *********/
 
 body {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 64px;
@@ -117,8 +117,8 @@ footer {
 #home_div {
     height: 500px;
     width: 50%;
-    top: 75px;
     left: 20px;
+    transform: translateY(30%);
     border-radius: 50px;
     padding: 20px 20px 0px;
     text-align: center;
