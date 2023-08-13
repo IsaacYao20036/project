@@ -9,6 +9,18 @@
     position: relative;
 }
 
+
+/*********
+*  BODY  *
+*********/
+
+body {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+}
+
 img {
     width: 250px;
 }
@@ -47,7 +59,7 @@ header h1{
     font-size: 40px;
     font-family: "Dancing Script", "Brush Script MT", cursive;
     font-weight: bold;
-    color:gold;
+    color: gold;
 }
 
 
@@ -70,22 +82,21 @@ a {
 
 
 /*********
-*  BODY  *
+*  MAIN  *
 *********/
 
-body {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 64px;
-}
-
 h2 {
+    font-size: 30px;
     font-family: "Bagel Fat One", fantasy;
     color: #311847;
 }
 
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 p {
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -96,6 +107,22 @@ p {
 
 footer {
     margin-top: auto;
+}
+
+
+/**************
+*  HOME PAGE  *
+**************/
+
+#home_div {
+    height: 500px;
+    width: 50%;
+    top: 75px;
+    left: 20px;
+    border-radius: 50px;
+    padding: 20px 20px 0px;
+    text-align: center;
+    background-color: lightpink;
 }
 
 
@@ -114,10 +141,6 @@ details summary > h2 {
 /* All divs under details */
 details .content {
     display: block;
-}
-
-h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
