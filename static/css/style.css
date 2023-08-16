@@ -41,7 +41,6 @@ header {
     left: 0px;
     right: 0px;
     top: 0px;
-    border-radius: 0px 0px 20px 20px;
     padding-left: 20px;
     background-color: #543fff;
 }
@@ -151,17 +150,32 @@ footer {
 *  OUR PRODUCTS PAGE  *
 **********************/
 
+details {
+    margin-bottom: 50px;
+}
+
 details summary {
     cursor: pointer;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: lightpink;
+}
+
+details summary::marker {
+    color: #311847;
 }
 
 details summary > h2 {
     display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
 }
 
 /* All divs under details */
 details .content {
     display: block;
+    left: 20px;
 }
 
 
