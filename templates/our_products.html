@@ -2,54 +2,67 @@
 {% block content %}
 
 <details>
-    <summary><h2>Flavours</h2></summary>    
-    <div class="content">
+    <summary><h2>Flavours</h2></summary>
 
         {% for item in flavours %}
-            <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
-            <p>{{ item[3] }}</p>
-            <img src="/static/images/{{ item[4] }}" alt="Photo of '{{ item[1] }}' Flavour">
+            <div class="item">
 
-            <p>Incompatible Toppings:</p>
-            {% for topping in incompatible_toppings %}
-                {% set flavour_id = topping[0] %}
-                {% if item[0] == flavour_id %}
-                    <ul><li>{{ topping[1] }} - {{ topping[2] }}</li></ul>
-                {% endif %}
-            {% endfor %}
+                <img class="item_image" src="/static/images/{{ item[4] }}" alt="Photo of '{{ item[1] }}' Flavour">
 
+                <div class="item_text">
+
+                    <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
+                    <p>{{ item[3] }}</p>
+
+                    <p>Incompatible Toppings:</p>
+                    {% for topping in incompatible_toppings %}
+                        {% set flavour_id = topping[0] %}
+                        {% if item[0] == flavour_id %}
+                            <ul><li>{{ topping[1] }} - {{ topping[2] }}</li></ul>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+                
+            </div>
         {% endfor %}
-    </div>
+
 </details>
 
 <details>
     <summary><h2>Toppings</h2></summary>
-    <div class="content">
 
         {% for item in toppings %}
-            <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
-            <p>{{ item[3] }}</p>
+            <div class="item">
 
-            <p>Incompatible Flavours:</p>
-            {% for flavour in incompatible_flavours %}
-                {% set topping_id = flavour[0] %}
-                {% if item[0] == topping_id %}
-                    <ul><li>{{ flavour[1] }} - {{ flavour[2] }}</li></ul>
-                {% endif %}
-            {% endfor %}
+                <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
+                <p>{{ item[3] }}</p>
 
+                <p>Incompatible Flavours:</p>
+                {% for flavour in incompatible_flavours %}
+                    {% set topping_id = flavour[0] %}
+                    {% if item[0] == topping_id %}
+                        <ul><li>{{ flavour[1] }} - {{ flavour[2] }}</li></ul>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
         {% endfor %}
-    </div>
+
 </details>
 
 <details>
     <summary><h2>Cones, Cups & Containers</h2></summary>
-    <div class="content">
+
         {% for item in containers %}
-            <h3>{{ item[1] }}</h3>
-            <p>{{ item[2] }}</p>
+            <div class="item">
+
+                <h3>{{ item[1] }}</h3>
+                <p>{{ item[2] }}</p>
+
+            </div>
         {% endfor %}
-    </div>
+
 </details>
 
 {% endblock %}

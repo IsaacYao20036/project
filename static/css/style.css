@@ -26,7 +26,7 @@ img {
 }
 
 li {
-    font-size: 18px;
+    font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -173,9 +173,24 @@ details summary > h2 {
 }
 
 /* All divs under details */
-details .content {
+details .item {
     display: block;
+    width: fit-content;
     left: 20px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #311847;
+}
+
+details .item .item_image {
+    border-style: solid;
+    border-radius: 50px;
+    border-color: black;
+}
+
+details .item .item_text {
+    display: inline-block;
+    vertical-align: top;
 }
 
 
