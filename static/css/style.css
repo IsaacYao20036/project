@@ -138,9 +138,9 @@ footer {
     width: 40%;
     left: 20px;
     margin-bottom: 50px;
-    border-style:double;
+    border-style: double;
     border-color: lightpink;
-    border-width: 5px;
+    border-width: 8px;
     border-radius: 50px;
     padding: 0px 20px;
 }
@@ -150,6 +150,10 @@ footer {
 *  OUR PRODUCTS PAGE  *
 **********************/
 
+.products_text {
+    padding-left: 20px;
+}
+
 details {
     margin-bottom: 50px;
 }
@@ -157,6 +161,7 @@ details {
 details summary {
     cursor: pointer;
     width: fit-content;
+    left: 40px;
     padding: 5px;
     border-radius: 20px;
     background-color: lightpink;
@@ -168,21 +173,28 @@ details summary::marker {
 
 details summary > h2 {
     display: inline;
+    font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
+    padding-left: 10px;
 }
 
 /* All divs under details */
 details .item {
     display: block;
     width: fit-content;
-    left: 20px;
+    background-color: rgba(255, 182, 193, 0.1);
+    left: 60px;
     margin-top: 20px;
-    border-style: solid;
+    border-width: 8px;
+    border-style: double;
+    border-radius: 20px;
     border-color: #311847;
+    padding: 10px;
 }
 
 details .item .item_image {
+    border-width: 2px;
     border-style: solid;
     border-radius: 50px;
     border-color: black;
@@ -191,6 +203,8 @@ details .item .item_image {
 details .item .item_text {
     display: inline-block;
     vertical-align: top;
+    inline-size: 800px;
+    padding-left: 20px;
 }
 
 
