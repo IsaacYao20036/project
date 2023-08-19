@@ -212,6 +212,31 @@ details .item .item_text {
 *  ORDER & DELIVERY PAGE  *
 **************************/
 
-select:invalid, select option[value=""] {
-  color: darkgray;
+#order_div {
+    width: fit-content;
+    border-width: 8px;
+    border-style: double;
+    border-radius: 20px;
+    border-color: lightpink;
+    padding: 20px;
+}
+
+input {
+    border-width: 1px;
+    border-style: dashed;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select {
+    border-width: 1px;
+    border-style: dashed;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+span {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }

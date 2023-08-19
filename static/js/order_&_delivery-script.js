@@ -2,19 +2,20 @@ var selectionCounter = 0
 function cloneFunction() {
 
 	var br = document.createElement("br");
-	document.getElementById("divContainer").appendChild(br)
+	document.getElementById("order_div").appendChild(br)
+	document.getElementById("order_div").appendChild(br.cloneNode(true))
 
 	var input = document.getElementById("quantity")
 	var clone = input.cloneNode(true)
 	var name = input.getAttribute("name") + selectionCounter++
 	clone.id = name
 	clone.setAttribute("name", name)
-	document.getElementById("divContainer").appendChild(clone).value = ""
+	document.getElementById("order_div").appendChild(clone).value = ""
 
 	var span = document.createElement("span");
 	var node = document.createTextNode(" x \u00A0");
 	span.appendChild(node);
-	var element = document.getElementById("divContainer");
+	var element = document.getElementById("order_div");
 	element.appendChild(span);
 
 	var select = document.getElementById("flavours")
@@ -22,12 +23,12 @@ function cloneFunction() {
 	var name = select.getAttribute("name") + selectionCounter++
 	clone.id = name
 	clone.setAttribute("name", name)
-	document.getElementById("divContainer").appendChild(clone)
+	document.getElementById("order_div").appendChild(clone)
 
 	var span = document.createElement("span");
 	var node = document.createTextNode("\u00A0 in \u00A0");
 	span.appendChild(node);
-	var element = document.getElementById("divContainer");
+	var element = document.getElementById("order_div");
 	element.appendChild(span);
 
 	var select = document.getElementById("containers")
@@ -35,7 +36,7 @@ function cloneFunction() {
 	var name = select.getAttribute("name") + selectionCounter++
 	clone.id = name
 	clone.setAttribute("name", name)
-	document.getElementById("divContainer").appendChild(clone)
+	document.getElementById("order_div").appendChild(clone)
 
 }
 
