@@ -3,38 +3,45 @@
 <h2>Order & Delivery</h2>
 
 <form>
-        
-    <div id="order_div">
 
-        <input type="number" id="quantity" name="quantity" value="" min="1" max="5">
-        <span> x&nbsp;</span>
+    <button id="order_btn" type="button" onclick="openDialog()">Order!</button>
 
-        <select name="flavours" id="flavours">
-            <option value="" selected>-- Select flavour --</option>
-            {% for f_name in flavours %}
-                <option value="{{ f_name[0] }}">{{ f_name[0] }}</option>
-            {% endfor %}
-        </select>
+    <div id="order_interface">
 
-        <span>&nbsp;in&nbsp;</span>
+        <div id="order_dropdowns">
 
-        <select name="containers" id="containers">
-            <option value="" selected>-- Select container --</option>
-            {% for c_item in containers %}
-                {% if c_item[0] >= 3 %}
-                    <option value="{{ c_item[1] }}">{{ c_item[1] }}</option>
-                {% endif %}
-            {% endfor %}
-        </select>
+            <input type="number" id="quantity" name="quantity" value="" min="1" max="5">
+            <span> x&nbsp;</span>
+
+            <select name="flavours" id="flavours">
+                <option value="" selected>-- Select flavour --</option>
+                {% for f_name in flavours %}
+                    <option value="{{ f_name[0] }}">{{ f_name[0] }}</option>
+                {% endfor %}
+            </select>
+
+            <span>&nbsp;in&nbsp;</span>
+
+            <select name="containers" id="containers">
+                <option value="" selected>-- Select container --</option>
+                {% for c_item in containers %}
+                    {% if c_item[0] >= 3 %}
+                        <option value="{{ c_item[1] }}">{{ c_item[1] }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <button id="addrow_btn" type="button" onclick="cloneFunction()">Add row</button>
 
     </div>
 
     <br>
-    <button type="button" onclick="cloneFunction()">Add row</button>
-    <br> <br>
-    <button type="button" id="clear_btn" onclick="location.reload()">Clear form</button>
-    <br> <br>
-    <button type="button" id="order_btn" onclick="openDialog()">Order!</button>
+    <button type="button" onclick="location.reload()">Clear form</button>
 
 </form>
 
