@@ -212,9 +212,13 @@ details .item .item_text {
 *  ORDER & DELIVERY PAGE  *
 **************************/
 
+.order_text {
+    padding-left: 20px;
+}
+
 #order_interface {
     width: fit-content;
-    left: 20px;
+    left: 40px;
     border-width: 8px;
     border-style: double;
     border-radius: 20px;
@@ -243,7 +247,7 @@ span {
 }
 
 button {
-    left: 20px;
+    left: 40px;
     border-radius: 20px;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
@@ -253,7 +257,7 @@ button {
     position: absolute;
     height: 75px;
     width: 150px;
-    left: 35%;
+    left: 700px;
     background-color: gold;
     color: black;
 }
