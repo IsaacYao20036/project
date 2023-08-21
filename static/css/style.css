@@ -214,6 +214,7 @@ details .item .item_text {
 
 #order_interface {
     width: fit-content;
+    left: 20px;
     border-width: 8px;
     border-style: double;
     border-radius: 20px;
@@ -242,6 +243,7 @@ span {
 }
 
 button {
+    left: 20px;
     border-radius: 20px;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
@@ -251,7 +253,7 @@ button {
     position: absolute;
     height: 75px;
     width: 150px;
-    left: 625px;
+    left: 35%;
     background-color: gold;
     color: black;
 }
@@ -266,6 +268,14 @@ button {
 }
 
 #order_dlg {
-    position: absolute;
+    position: fixed;
+    text-align: center;
+    border-width: 8px;
+    border-style: double;
+    border-radius: 20px;
+    border-color: #311847;
+    background-color: rgba(255, 182, 193, 0.1);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
