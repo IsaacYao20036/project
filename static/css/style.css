@@ -45,7 +45,7 @@ header {
     background-color: #543fff;
 }
 
-/* Logo image left of header h1 */
+/* logo image left of header h1 */
 #logo {
     width: 56px;
     top: 5px;
@@ -114,6 +114,7 @@ footer {
 *  HOME PAGE  *
 **************/
 
+/* div container on home page */
 #home_div {
     height: 500px;
     width: 50%;
@@ -130,10 +131,12 @@ footer {
 *  ABOUT US PAGE  *
 ******************/
 
+/* h2s on about us page */
 .about_h2 {
     padding-left: 20px;
 }
 
+/* content under about us h2s */
 .about_content {
     width: 40%;
     left: 20px;
@@ -150,6 +153,7 @@ footer {
 *  OUR PRODUCTS PAGE  *
 **********************/
 
+/* text above details on our products page */
 .products_text {
     padding-left: 20px;
 }
@@ -168,6 +172,7 @@ details summary {
     background-color: lightpink;
 }
 
+/* triangle next to each details' summary */
 details summary::marker {
     color: #311847;
 }
@@ -180,7 +185,7 @@ details summary > h2 {
     padding-left: 10px;
 }
 
-/* All divs under details */
+/* divs of each item under each details */
 details .item {
     display: block;
     width: fit-content;
@@ -194,6 +199,7 @@ details .item {
     padding: 10px;
 }
 
+/* image in item div */
 details .item .item_image {
     border-width: 2px;
     border-style: solid;
@@ -201,6 +207,7 @@ details .item .item_image {
     border-color: black;
 }
 
+/* text in item div */
 details .item .item_text {
     display: inline-block;
     vertical-align: top;
@@ -213,10 +220,12 @@ details .item .item_text {
 *  ORDER & DELIVERY PAGE  *
 **************************/
 
+/* text above order interface in order & delivery page */
 .order_text {
     padding-left: 20px;
 }
 
+/* order interface div */
 #order_interface {
     width: fit-content;
     left: 40px;
@@ -241,7 +250,6 @@ select {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 span {
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
@@ -254,7 +262,7 @@ button {
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* order button next to interface div */
 #order_btn {
     position: absolute;
     height: 75px;
@@ -264,15 +272,18 @@ button {
     color: black;
 }
 
+/* when order button is disabled */
 #order_btn:disabled {
     background-color: rgba(255, 215, 0, 0.5);
     color: grey;
 }
 
+/* add row button in interface div */
 #addrow_btn {
     background-color: lightpink;
 }
 
+/* order dialog */
 #order_dlg {
     position: fixed;
     z-index: 1;
