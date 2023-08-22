@@ -159,6 +159,7 @@ details {
 }
 
 details summary {
+    user-select: none;
     cursor: pointer;
     width: fit-content;
     left: 40px;
@@ -247,6 +248,7 @@ span {
 }
 
 button {
+    user-select: none;
     left: 40px;
     border-radius: 20px;
     font-size: 17px;
@@ -272,7 +274,8 @@ button {
 }
 
 #order_dlg {
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     text-align: center;
     border-width: 8px;
     border-style: double;
