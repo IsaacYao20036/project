@@ -47,7 +47,7 @@ def order_and_delivery():
     cur = conn.cursor()
     cur.execute("SELECT name FROM Flavour")
     flavours = cur.fetchall()
-    cur.execute("SELECT id, name FROM Container")
+    cur.execute("SELECT name, deliverable FROM Container")
     containers = cur.fetchall()
     return render_template("order_&_delivery.html", flavours=flavours,
                            containers=containers)

@@ -7,7 +7,7 @@ Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are from fresh, 
 
 <br>
 
-<!-- flavour collapsible list -->
+<!-- flavours collapsible list -->
 <details>
     <summary><h2>Flavours</h2></summary>
 
@@ -18,10 +18,11 @@ Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are from fresh, 
 
                 <div class="item_text">
 
-                    <!-- name, price & description of flavour respectively -->
+                    <!-- name, price & description of each flavour respectively -->
                     <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
                     <p>{{ item[3] }}</p>
 
+                    <!-- incompatible topping name and corresponding warning for each flavour -->
                     <p>Incompatible Toppings:</p>
                     {% for topping in incompatible_toppings %}
                         {% set flavour_id = topping[0] %}
@@ -37,15 +38,18 @@ Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are from fresh, 
 
 </details>
 
+<!-- toppings collapsible list -->
 <details>
     <summary><h2>Toppings</h2></summary>
 
         {% for item in toppings %}
             <div class="item">
 
+                <!-- name, price & description of each topping -->
                 <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
                 <p>{{ item[3] }}</p>
 
+                <!-- incompatible flavour name & corresponding warning for each topping -->
                 <p>Incompatible Flavours:</p>
                 {% for flavour in incompatible_flavours %}
                     {% set topping_id = flavour[0] %}
@@ -59,12 +63,14 @@ Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are from fresh, 
 
 </details>
 
+<!-- containers collapsible list -->
 <details>
     <summary><h2>Cones, Cups & Containers</h2></summary>
 
         {% for item in containers %}
             <div class="item">
 
+                <!-- name & description for each container -->
                 <h3>{{ item[1] }}</h3>
                 <p>{{ item[2] }}</p>
 
