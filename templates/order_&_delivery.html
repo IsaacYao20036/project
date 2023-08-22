@@ -5,6 +5,17 @@
 <p class="order_text">Instead of buying in-store, you can order our ice creams in tubs or boxes and we can deliver it to you!</p>
 <br>
 
+<!-- dialog after clicking order button -->
+<dialog id="order_dlg">
+    <p>Thanks for ordering your ice-cream(s) from Willieotter's Wizard Ice-creams! Your delivery will arrive shortly.</p>
+    (Maximum delivery time of one hour in cities where our branches are located.)
+    <br> <br>
+    <form method="dialog">
+        <!-- OK button to close dialog and refresh page -->
+        <button onclick="location.reload()">OK</button>
+    </form>
+</dialog>
+
 <!-- form for ordering items -->
 <form>
 
@@ -53,19 +64,9 @@
     <br>
     <!-- clear form button refreshes page (thereby clearing it) -->
     <button type="button" onclick="location.reload()">Clear form</button>
+    <br> <br>
 
 </form>
-
-<!-- dialog after clicking order button -->
-<dialog id="order_dlg">
-    <p>Thanks for ordering your ice-cream(s) from Willieotter's Wizard Ice-creams! Your delivery will arrive shortly.</p>
-    (Maximum delivery time of one hour in cities where our branches are located.)
-    <br> <br>
-    <form method="dialog">
-        <!-- OK button to close dialog and refresh page -->
-        <button onclick="location.reload()">OK</button>
-    </form>
-</dialog>
 
 <script src="{{url_for('static', filename='/js/order_&_delivery-script.js')}}"></script>
 
