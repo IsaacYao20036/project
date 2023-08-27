@@ -1,4 +1,4 @@
-/* Based on the page the user is on, this script changes the corresponding nav hyperlink to bold */
+/* Based on the page the user is on, this script changes the corresponding nav hyperlink to a different font */
 
 let path = location.pathname; /* Gets URL of current page, stores in path */
 let linkID;
@@ -14,5 +14,5 @@ if (path == "/") {
     linkID = "order_&_delivery"
 }
 
-/* Changes nav link to bold with same id in linkID */
+/* Changes nav link to different font with same id in linkID */
 document.getElementById(linkID).style.fontFamily = "Bagel Fat One", fantasy ;
