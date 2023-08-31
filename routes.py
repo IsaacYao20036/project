@@ -5,6 +5,26 @@ import sqlite3
 app = Flask(__name__)
 
 
+def query_db(statement, id, fetch):
+
+    conn = sqlite3.connect("project.db")
+    cur = conn.cursor()
+
+    if id is None:
+        cur.execute(statement)
+    else:
+        cur.execute(statement, id)
+
+    if fetch == "one":
+        results = cur.fetchone()
+    elif fetch == "all":
+        results = cur.fetchall()
+    else:
+        pass
+    
+    return results
+
+
 # connects home.html to / route
 @app.route("/")
 def home():
@@ -20,20 +40,13 @@ def about_us():
 # connects our_product.html to /our_products route
 @app.route("/our_products")
 def our_products():
-    conn = sqlite3.connect("project.db")
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM Flavour")
-    flavours = cur.fetchall()
-    cur.execute("SELECT * FROM Topping")
-    toppings = cur.fetchall()
-    cur.execute("SELECT * FROM Container")
-    containers = cur.fetchall()
+    flavours = query_db("SELECT * FROM Flavour", None, "all")
+    toppings = query_db("SELECT * FROM Topping", None, "all")
+    containers = query_db("SELECT * FROM Container", None, "all")
     # queries toppings incompatible to each flavour
-    cur.execute("SELECT Incompatible.fid, Topping.name, Incompatible.warning FROM Incompatible INNER JOIN Topping ON Incompatible.tid=Topping.id")
-    incompatible_toppings = cur.fetchall()
+    incompatible_toppings = query_db("SELECT Incompatible.fid, Topping.name, Incompatible.warning FROM Incompatible INNER JOIN Topping ON Incompatible.tid=Topping.id", None, "all")
     # queries flavours incompatible to each topping
-    cur.execute("SELECT Incompatible.tid, Flavour.name, Incompatible.warning FROM Incompatible INNER JOIN Flavour ON Incompatible.fid=Flavour.id")
-    incompatible_flavours = cur.fetchall()
+    incompatible_flavours = query_db("SELECT Incompatible.tid, Flavour.name, Incompatible.warning FROM Incompatible INNER JOIN Flavour ON Incompatible.fid=Flavour.id", None, "all")
     return render_template("our_products.html", flavours=flavours,
                            toppings=toppings, containers=containers,
                            incompatible_toppings=incompatible_toppings,
@@ -43,12 +56,8 @@ def our_products():
 # connects order_&_delivery.html to /order_&_delivery route
 @app.route("/order_&_delivery")
 def order_and_delivery():
-    conn = sqlite3.connect("project.db")
-    cur = conn.cursor()
-    cur.execute("SELECT name FROM Flavour")
-    flavours = cur.fetchall()
-    cur.execute("SELECT name, deliverable FROM Container")
-    containers = cur.fetchall()
+    flavours = query_db("SELECT name FROM Flavour", None, "all")
+    containers = query_db("SELECT name, deliverable FROM Container", None, "all")
     return render_template("order_&_delivery.html", flavours=flavours,
                            containers=containers)
 
