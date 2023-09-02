@@ -59,6 +59,12 @@ def our_products():
                            incompatible_flavours=incompatible_flavours)
 
 
+@app.route("/flavours")
+def flavours():
+    flavours = query_db("SELECT * FROM Flavour", None, "all")
+    return render_template("flavours.html", flavours=flavours)
+
+
 # connects order_&_delivery.html to /order_&_delivery route
 @app.route("/order_&_delivery")
 def order_and_delivery():

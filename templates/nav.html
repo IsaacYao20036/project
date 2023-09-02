@@ -1,6 +1,16 @@
-<a href = "/" id="home">Home</a> &nbsp;&nbsp; 
-<a href = "/about_us" id="about_us">About Us</a> &nbsp;&nbsp; 
-<a href = "/our_products" id = "our_products">Our Products</a> &nbsp;&nbsp; 
-<a href = "/order_&_delivery" id="order_&_delivery">Order & Delivery</a>
+<a href="/" id="home">Home</a> &nbsp;&nbsp; 
+<a href="/about_us" id="about_us">About Us</a> &nbsp;&nbsp; 
+
+<div id="dropdown">
+
+    <a href="javascript:void(0)" id="our_products">Our Products</a> &nbsp;&nbsp; 
+    
+    <div id="dropdown_content">
+        <a href="/flavours" id="flavours">Flavours</a>
+    </div>
+    
+</div>
+
+<a href="/order_&_delivery" id="order_&_delivery">Order & Delivery</a>
 
 <script src="{{url_for('static', filename='/js/nav-script.js')}}"></script>
