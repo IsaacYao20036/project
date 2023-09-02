@@ -80,6 +80,25 @@ a {
     text-decoration: none;
 }
 
+#dropdown {
+    display: inline-block;
+    padding-bottom: 7px;
+}
+  
+#dropdown_content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 150px;
+    margin-top: 7px;
+    padding: 12px 16px;
+    background-color:#9487fa;
+}
+
+#dropdown:hover #dropdown_content {
+    display: block;
+}
+
 
 /*********
 *  MAIN  *
@@ -219,6 +238,11 @@ details .item .item_text {
     inline-size: 800px;
     padding-left: 20px;
 }
+
+
+/******************
+*  FLAVOURS PAGE  *
+*******************/
 
 
 /**************************
