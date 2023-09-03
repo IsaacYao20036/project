@@ -1,20 +1,25 @@
 {% extends "layout.html" %}
 {% block content %}
 
-{% for item in flavours %}
+<h2 class="flavours_text">Our Products - Flavours</h2>
+<p class="flavours_text">Here you can see our fantastic, flavoursome flavours!
+Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are made of fresh, real ingredients from reputable sources.</p>
+
+<div id="grid_container">
+
+    {% for item in flavours %}
     <div class="item">
 
         <img class="item_image" src="/static/images/{{ item[4] }}" alt="Photo of '{{ item[1] }}' Flavour">
 
-        <div class="item_text">
-
-            <!-- name, price & description of each flavour respectively -->
-            <h3>{{ item[1] }} &nbsp; ${{ item[2] }}</h3>
-            <p>{{ item[3] }}</p>
-
+        <div>
+            <!-- name of each flavour -->
+            <h3>{{ item[1] }}</h3>
         </div>
 
     </div>
-{% endfor %}
+    {% endfor %}
+
+</div>
 
 {% endblock %}

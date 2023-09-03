@@ -244,6 +244,31 @@ details .item .item_text {
 *  FLAVOURS PAGE  *
 *******************/
 
+/* text above details on our products page */
+.flavours_text {
+    padding-left: 20px;
+}
+
+#grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
+    text-align: center;
+    padding: 50px;
+}
+
+/* grid item is each flavour/item */
+#grid_container .item {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: lightpink;
+}
+
+/* image of each flavour */
+#grid_container .item .item_image{
+    border-radius: 50%;
+}
+
 
 /**************************
 *  ORDER & DELIVERY PAGE  *
