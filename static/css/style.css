@@ -270,6 +270,14 @@ details .item .item_text {
 }
 
 
+/************************
+*  FLAVOURS ITEM PAGEs  *
+*************************/
+
+.item_div {
+    text-align: center;
+}
+
 /**************************
 *  ORDER & DELIVERY PAGE  *
 **************************/
