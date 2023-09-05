@@ -8,16 +8,20 @@ Willieotter's Wizard Ice-creams' one-of-a-kind dessert delights are made of fres
 <div id="grid_container">
 
     {% for item in flavours %}
-    <div class="item">
+    <a href="/flavours/{{ item[0] }}">
 
-        <img class="item_image" src="/static/images/{{ item[4] }}" alt="Photo of '{{ item[1] }}' Flavour">
+        <div class="item">
 
-        <div>
-            <!-- name of each flavour -->
-            <h3>{{ item[1] }}</h3>
+                <img class="item_image" src="/static/images/{{ item[2] }}" alt="Photo of '{{ item[1] }}' Flavour">
+
+                <div>
+                    <!-- name of each flavour -->
+                    <h3>{{ item[1] }}</h3>
+                </div>
+
         </div>
 
-    </div>
+    </a>
     {% endfor %}
 
 </div>

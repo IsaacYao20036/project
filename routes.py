@@ -61,8 +61,14 @@ def our_products():
 
 @app.route("/flavours")
 def flavours():
-    flavours = query_db("SELECT * FROM Flavour", None, "all")
+    flavours = query_db("SELECT id, name, picture FROM Flavour", None, "all")
     return render_template("flavours.html", flavours=flavours)
+
+
+@app.route("/flavours/<int:id>")
+def flavours_item(id):
+    flavour = query_db("SELECT * FROM Flavour WHERE id=?", (id,), "one")
+    return render_template("flavours_item.html", flavour=flavour)
 
 
 # connects order_&_delivery.html to /order_&_delivery route
