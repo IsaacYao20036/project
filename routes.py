@@ -68,7 +68,14 @@ def flavours():
 @app.route("/flavours/<int:id>")
 def flavours_item(id):
     flavour = query_db("SELECT * FROM Flavour WHERE id=?", (id,), "one")
-    return render_template("flavours_item.html", flavour=flavour)
+    # queries toppings incompatible to a certain flavour
+    incompatible_toppings = query_db("SELECT Incompatible.fid, Topping.name, \
+                                     Incompatible.warning FROM Incompatible \
+                                     INNER JOIN Topping ON Incompatible.tid=\
+                                     Topping.id WHERE Incompatible.fid=?",
+                                     (id,), "all")
+    return render_template("flavours_item.html", flavour=flavour,
+                           incompatible_toppings=incompatible_toppings)
 
 
 # connects order_&_delivery.html to /order_&_delivery route

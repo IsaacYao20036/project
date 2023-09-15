@@ -1,7 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
 
-{{flavour}}
+<a href="/flavours" class="back_btn">
+    <button>&larr; Back</button>
+</a>
 
 <div class="item_div">
 
@@ -10,6 +12,16 @@
     <h3> Price: ${{ flavour[2] }} </h3>
     <p>{{ flavour[3] }}</p>
 
+    <div class="incompatible_div">
+        <span>Incompatible Toppings:</span>
+        {% for topping in incompatible_toppings %}
+            {% set flavour_id = topping[0] %}
+            {% if flavour[0] == flavour_id %}
+                <ul><li>{{ topping[1] }} - {{ topping[2] }}</li></ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
 </div>
 
 {% endblock %}
