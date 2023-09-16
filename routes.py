@@ -105,6 +105,22 @@ def toppings_item(id):
                            incompatible_flavours=incompatible_flavours)
 
 
+# connects containers.html to /containers route
+@app.route("/containers")
+def containers():
+    containers = query_db("SELECT id, name FROM Container", None, "all")
+    return render_template("containers.html", containers=containers)
+
+
+# connects containers_item.html to /containers/<int:id> route
+# where <int:id> is the id of a certain containers
+# (a different individual webpage per container)
+@app.route("/containers/<int:id>")
+def containers_item(id):
+    container = query_db("SELECT * FROM Container WHERE id=?", (id,), "one")
+    return render_template("containers_item.html", container=container)
+
+
 # connects order_&_delivery.html to /order_&_delivery route
 @app.route("/order_&_delivery")
 def order_and_delivery():

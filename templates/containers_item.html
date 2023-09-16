@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<a href="/containers" class="back_btn">
+    <button>&larr; Back</button>
+</a>
+
+<div class="item_div">
+
+    <!-- name, description & delivery status of the container respectively-->
+    <h2>{{ container[1] }}</h2>
+    <p>{{ container[2] }}</p>
+    <span>Deliverable: {{ container[3] }}</span>
+
+</div>
+
+{% endblock %}

@@ -278,7 +278,7 @@ details .item .item_text {
 
 /**********************************************************
 *                       ITEM PAGES                        *
-*  (FLAVOURS ITEM, TOPPINGS ITEM & CONTAINER ITEM PAGES)  *
+*  (FLAVOURS ITEM, TOPPINGS ITEM & CONTAINERS ITEM PAGES)  *
 **********************************************************/
 
 .back_btn {
@@ -298,7 +298,7 @@ details .item .item_text {
 }
 
 .incompatible_div {
-    text-align: left;;
+    text-align: left;
 }
 
 /**************************

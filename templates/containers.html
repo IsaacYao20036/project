@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2 class="products_text">Our Products - Containers</h2>
+<p class="products_text">Here you can see our convenient cones, cups & containers!
+Some containers are not availible for delivery.</p>
+
+<div id="grid_container">
+
+    {% for item in containers %}
+    <a href="/containers/{{ item[0] }}">
+
+        <div class="item">
+
+                <div>
+                    <!-- name of each container -->
+                    <h3>{{ item[1] }}</h3>
+                </div>
+
+        </div>
+
+    </a>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
