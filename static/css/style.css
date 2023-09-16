@@ -95,6 +95,11 @@ a {
     background-color:#9487fa;
 }
 
+.dropdown_links {
+    display: inline-block;
+    margin-top: 10px;
+}
+
 #dropdown:hover #dropdown_content {
     display: block;
 }
@@ -182,11 +187,6 @@ footer {
 *  OUR PRODUCTS PAGE  *
 **********************/
 
-/* text above details on our products page */
-.products_text {
-    padding-left: 20px;
-}
-
 details {
     margin-bottom: 50px;
 }
@@ -245,39 +245,41 @@ details .item .item_text {
 }
 
 
-/******************
-*  FLAVOURS PAGE  *
-*******************/
+/******************************************
+*           OUR PRODUCTS PAGES            *
+*  (FLAVOURS, TOPPINGS & CONTAINERS PAGES)  *
+******************************************/
 
-/* text above details on our products page */
-.flavours_text {
+/* text above details on our products pages */
+.products_text {
     padding-left: 20px;
 }
 
 #grid_container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     gap: 50px;
-    text-align: center;
     padding: 50px;
 }
 
-/* grid item is each flavour/item */
+/* grid item is each item */
 #grid_container .item {
     border-radius: 20px;
     padding: 10px;
+    text-align: center;
     background-color: lightpink;
 }
 
-/* image of each flavour */
+/* image of each flavour for flavours page */
 #grid_container .item .item_image{
     border-radius: 50%;
 }
 
 
-/************************
-*  FLAVOURS ITEM PAGEs  *
-*************************/
+/**********************************************************
+*                       ITEM PAGES                        *
+*  (FLAVOURS ITEM, TOPPINGS ITEM & CONTAINER ITEM PAGES)  *
+**********************************************************/
 
 .back_btn {
     top: 50px;

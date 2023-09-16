@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2 class="products_text">Our Products - Toppings</h2>
+<p class="products_text">Here you can see our terrifically tasty toppings!
+Our top-quality toppings are sure to give your ice cream that extra touch or sparkle.</p>
+
+<div id="grid_container">
+
+    {% for item in toppings %}
+    <a href="/toppings/{{ item[0] }}">
+
+        <div class="item">
+
+                <div>
+                    <!-- name of each topping -->
+                    <h3>{{ item[1] }}</h3>
+                </div>
+
+        </div>
+
+    </a>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

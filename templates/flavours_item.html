@@ -7,11 +7,13 @@
 
 <div class="item_div">
 
+    <!-- name, image, price & description of each flavour respectively -->
     <h2>{{ flavour[1] }}</h2>
     <img src="/static/images/{{ flavour[4] }}" alt="Photo of '{{ flavour[1] }}' Flavour">
     <h3> Price: ${{ flavour[2] }} </h3>
     <p>{{ flavour[3] }}</p>
 
+    <!-- incompatible topping name and corresponding warning for each flavour -->
     <div class="incompatible_div">
         <span>Incompatible Toppings:</span>
         {% for topping in incompatible_toppings %}

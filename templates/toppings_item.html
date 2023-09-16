@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<a href="/toppings" class="back_btn">
+    <button>&larr; Back</button>
+</a>
+
+<div class="item_div">
+
+    <!-- name, price & description of the topping respectively-->
+    <h2>{{ topping[1] }}</h2>
+    <h3> Price: ${{ topping[2] }} </h3>
+    <p>{{ topping[3] }}</p>
+
+    <!-- incompatible flavour name & corresponding warning for the topping -->
+    <div class="incompatible_div">
+        <span>Incompatible Flavours:</span>
+        {% for flavour in incompatible_flavours %}
+            {% set topping_id = flavour[0] %}
+            {% if topping[0] == topping_id %}
+                <ul><li>{{ flavour[1] }} - {{ flavour[2] }}</li></ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+</div>
+
+{% endblock %}
