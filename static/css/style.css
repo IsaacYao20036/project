@@ -192,68 +192,6 @@ footer {
 }
 
 
-/**********************
-*  OUR PRODUCTS PAGE  *
-**********************/
-
-details {
-    margin-bottom: 50px;
-}
-
-details summary {
-    user-select: none;
-    cursor: pointer;
-    width: fit-content;
-    left: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: lightpink;
-}
-
-/* triangle next to each details' summary */
-details summary::marker {
-    color: #311847;
-}
-
-details summary > h2 {
-    display: inline;
-    font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    padding-left: 10px;
-}
-
-/* divs of each item under each details */
-details .item {
-    display: block;
-    width: fit-content;
-    background-color: rgba(255, 182, 193, 0.1);
-    left: 60px;
-    margin-top: 20px;
-    border-width: 8px;
-    border-style: double;
-    border-radius: 20px;
-    border-color: #311847;
-    padding: 10px;
-}
-
-/* image in item div */
-details .item .item_image {
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 50px;
-    border-color: black;
-}
-
-/* text in item div */
-details .item .item_text {
-    display: inline-block;
-    vertical-align: top;
-    inline-size: 800px;
-    padding-left: 20px;
-}
-
-
 /******************************************
 *           OUR PRODUCTS PAGES            *
 *  (FLAVOURS, TOPPINGS & CONTAINERS PAGES)  *

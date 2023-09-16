@@ -37,28 +37,6 @@ def about_us():
     return render_template("about_us.html")
 
 
-# connects our_product.html to /our_products route
-@app.route("/our_products")
-def our_products():
-    flavours = query_db("SELECT * FROM Flavour", None, "all")
-    toppings = query_db("SELECT * FROM Topping", None, "all")
-    containers = query_db("SELECT * FROM Container", None, "all")
-    # queries toppings incompatible to each flavour
-    incompatible_toppings = query_db("SELECT Incompatible.fid, Topping.name, \
-                                     Incompatible.warning FROM Incompatible \
-                                     INNER JOIN Topping ON Incompatible.tid=\
-                                     Topping.id", None, "all")
-    # queries flavours incompatible to each topping
-    incompatible_flavours = query_db("SELECT Incompatible.tid, Flavour.name, \
-                                     Incompatible.warning FROM Incompatible \
-                                     INNER JOIN Flavour ON Incompatible.fid=\
-                                     Flavour.id", None, "all")
-    return render_template("our_products.html", flavours=flavours,
-                           toppings=toppings, containers=containers,
-                           incompatible_toppings=incompatible_toppings,
-                           incompatible_flavours=incompatible_flavours)
-
-
 # connects flavours.html to /flavours route
 @app.route("/flavours")
 def flavours():
