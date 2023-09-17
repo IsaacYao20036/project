@@ -45,17 +45,20 @@ header {
     background-color: #543fff;
 }
 
-/* logo image left of header h1 */
-#logo {
-    width: 56px;
-    top: 5px;
+/* hyperlink around logo and h1 */
+#header_link {
+    margin-right: 200px;
 }
 
-header h1{
+/* logo image left of h1 */
+a #logo {
+    width: 56px;
+    top: 15px;
+}
+
+a h1{
     display: inline;
     padding-left: 20px;
-    padding-right: 200px;
-    bottom: 10px;
     font-size: 40px;
     font-family: "Dancing Script", "Brush Script MT", cursive;
     font-weight: bold;
