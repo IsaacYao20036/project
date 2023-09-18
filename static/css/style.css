@@ -147,14 +147,24 @@ button {
     border-radius: 20px;
 }
 
+.fine_txt {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /***********
 *  FOOTER  *
 ***********/
 
 footer {
+    height: fit-content;
     margin-top: auto;
 }
 
+#footer_fine {
+    float: right;
+    bottom: 5px;
+}
 
 /**************
 *  HOME PAGE  *
