@@ -10,13 +10,13 @@ if (path == "/") {
     linkID = "about_us"
 } else if (path == "/flavours") {
     linkID = "our_products"
-    linkID_2 = "flavours"
+    linkID_2 = "flavours_link"
 } else if (path == "/toppings") {
     linkID = "our_products"
-    linkID_2 = "toppings"
+    linkID_2 = "toppings_link"
 } else if (path == "/containers") {
     linkID = "our_products"
-    linkID_2 = "containers"
+    linkID_2 = "containers_link"
 } else if (path == "/order_&_delivery") {
     linkID = "order_&_delivery"
 }
