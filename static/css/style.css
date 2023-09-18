@@ -30,6 +30,16 @@ img {
     width: 250px;
 }
 
+.disclaimers {
+    float: left;
+    text-align: left;
+    cursor: pointer;
+}
+
+.fine_text {
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 /***********
 *  HEADER  *
@@ -147,10 +157,6 @@ button {
     border-radius: 20px;
 }
 
-.fine_txt {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 /***********
 *  FOOTER  *
@@ -161,10 +167,6 @@ footer {
     margin-top: auto;
 }
 
-#footer_fine {
-    float: right;
-    bottom: 5px;
-}
 
 /**************
 *  HOME PAGE  *
@@ -319,6 +321,7 @@ select {
 /* order dialog */
 #order_dlg {
     position: fixed;
+    width: 60%;
     z-index: 1;
     text-align: center;
     transform: translateY(50%);

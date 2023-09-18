@@ -7,13 +7,32 @@
 
 <!-- dialog after clicking order button -->
 <dialog id="order_dlg">
+
     <p>Thanks for ordering your ice-cream(s) from Willieotter's Wizard Ice-creams! Your delivery will arrive shortly.</p>
     (Maximum delivery time of one hour in cities where our branches are located.)
+
     <br> <br>
+
     <form method="dialog">
         <!-- OK button to close dialog and refresh page -->
         <button onclick="location.reload()">OK</button>
     </form>
+
+    <br>
+
+    <!-- disclaimer under OK button -->
+    <details class="disclaimers">
+        <summary class="fine_text">Disclaimer:</summary>
+        <p class="fine_text">
+            The order & delivery service on this website is purely fictional and not functional for real transactions.
+            It is intended for creative and entertainment purposes only.
+            No actual orders or payments can be processed through this platform.
+            Due to its fictitious nature, none of the website's goods will be delivered.
+            If you are given any real-life goods or services resembling any of the products of the website's fictional business,
+            note it was not sent by us, and you should be very concerned and worried.
+        </p>
+    </details>
+
 </dialog>
 
 <!-- form for ordering items -->
