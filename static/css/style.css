@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 64px;
+    margin: 0px;
 }
 
 #home_body {
@@ -37,7 +38,7 @@ img {
 }
 
 .fine_text {
-    font-size: 8px;
+    font-size: 9px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -165,6 +166,8 @@ button {
 footer {
     height: fit-content;
     margin-top: auto;
+    padding: 0px 10px;
+    background-color: white;
 }
 
 
@@ -194,16 +197,39 @@ footer {
     padding-left: 20px;
 }
 
-/* content under about us h2s */
 .about_content {
-    width: 40%;
+    clear: both;
     left: 20px;
     margin-bottom: 50px;
+    overflow: auto;
+}
+
+/* text under about us h2s */
+.about_text {
+    float: left;
+    width: 40%;
     border-style: double;
     border-color: lightpink;
     border-width: 8px;
     border-radius: 50px;
     padding: 0px 20px;
+}
+
+.about_image {
+    left: 200px;
+    width: 30%;
+    border-style: outset;
+    border-color: gold;
+    border-width: 8px;
+    border-radius: 50px;
+}
+
+#locations_image {
+    margin-top: 100px;
+}
+
+#contact_image {
+    margin-top: 40px;
 }
 
 
