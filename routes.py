@@ -50,14 +50,19 @@ def flavours():
 @app.route("/flavours/<int:id>")
 def flavours_item(id):
     flavour = query_db("SELECT * FROM Flavour WHERE id=?", (id,), "one")
-    # queries toppings incompatible to a certain flavour
-    incompatible_toppings = query_db("SELECT Incompatible.fid, Topping.name, \
-                                     Incompatible.warning FROM Incompatible \
-                                     INNER JOIN Topping ON Incompatible.tid=\
-                                     Topping.id WHERE Incompatible.fid=?",
-                                     (id,), "all")
-    return render_template("flavours_item.html", flavour=flavour,
-                           incompatible_toppings=incompatible_toppings)
+    # if flavour id exists then render flavour_items.html
+    if flavour:
+        # queries toppings incompatible to a certain flavour
+        incompatible_toppings = query_db("SELECT Incompatible.fid,\
+                                         Topping.name, Incompatible.warning\
+                                         FROM Incompatible INNER JOIN Topping\
+                                         ON Incompatible.tid=Topping.id WHERE\
+                                         Incompatible.fid=?", (id,), "all")
+        return render_template("flavours_item.html", flavour=flavour,
+                               incompatible_toppings=incompatible_toppings)
+    # return 404 error if id does not exist
+    else:
+        return render_template("404.html")
 
 
 # connects toppings.html to /toppings route
@@ -73,14 +78,18 @@ def toppings():
 @app.route("/toppings/<int:id>")
 def toppings_item(id):
     topping = query_db("SELECT * FROM Topping WHERE id=?", (id,), "one")
-    # queries flavours incompatible to a certain topping
-    incompatible_flavours = query_db("SELECT Incompatible.tid, Flavour.name, \
-                                     Incompatible.warning FROM Incompatible \
-                                     INNER JOIN Flavour ON Incompatible.fid=\
-                                     Flavour.id WHERE Incompatible.tid=?",
-                                     (id,), "all")
-    return render_template("toppings_item.html", topping=topping,
-                           incompatible_flavours=incompatible_flavours)
+    # if flavour id exists then render flavour_items.html
+    if topping:
+        # queries flavours incompatible to a certain topping
+        incompatible_flavours = query_db("SELECT Incompatible.tid,\
+                                         Flavour.name, Incompatible.warning\
+                                         FROM Incompatible INNER JOIN Flavour\
+                                         ON Incompatible.fid=Flavour.id WHERE\
+                                         Incompatible.tid=?", (id,), "all")
+        return render_template("toppings_item.html", topping=topping,
+                               incompatible_flavours=incompatible_flavours)
+    else:
+        return render_template("404.html")
 
 
 # connects containers.html to /containers route
@@ -96,7 +105,11 @@ def containers():
 @app.route("/containers/<int:id>")
 def containers_item(id):
     container = query_db("SELECT * FROM Container WHERE id=?", (id,), "one")
-    return render_template("containers_item.html", container=container)
+    # if flavour id exists then render flavour_items.htmlv
+    if container:
+        return render_template("containers_item.html", container=container)
+    else:
+        return render_template("404.html")
 
 
 # connects order_&_delivery.html to /order_&_delivery route
