@@ -5,16 +5,19 @@ import sqlite3
 app = Flask(__name__)
 
 
+# this function queries the database
 def query_db(statement, id, fetch):
 
     conn = sqlite3.connect("project.db")
     cur = conn.cursor()
 
+    # if the query does not take an id
     if id is None:
         cur.execute(statement)
     else:
         cur.execute(statement, id)
 
+    # determines whether to fetchone or fetchall
     if fetch == "one":
         results = cur.fetchone()
     elif fetch == "all":
@@ -50,7 +53,7 @@ def flavours():
 @app.route("/flavours/<int:id>")
 def flavours_item(id):
     flavour = query_db("SELECT * FROM Flavour WHERE id=?", (id,), "one")
-    # if flavour id exists then render flavour_items.html
+    # if flavour id exists then render flavours_item.html
     if flavour:
         # queries toppings incompatible to a certain flavour
         incompatible_toppings = query_db("SELECT Incompatible.fid,\
@@ -78,7 +81,7 @@ def toppings():
 @app.route("/toppings/<int:id>")
 def toppings_item(id):
     topping = query_db("SELECT * FROM Topping WHERE id=?", (id,), "one")
-    # if flavour id exists then render flavour_items.html
+    # if topping id exists then render toppings_item.html
     if topping:
         # queries flavours incompatible to a certain topping
         incompatible_flavours = query_db("SELECT Incompatible.tid,\
@@ -105,7 +108,7 @@ def containers():
 @app.route("/containers/<int:id>")
 def containers_item(id):
     container = query_db("SELECT * FROM Container WHERE id=?", (id,), "one")
-    # if flavour id exists then render flavour_items.htmlv
+    # if container id exists then render containers_items.html
     if container:
         return render_template("containers_item.html", container=container)
     else:
